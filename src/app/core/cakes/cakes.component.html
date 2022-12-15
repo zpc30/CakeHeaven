@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="">Sort by ingredients: </label>
+                <select (change)="selValue($event)" class="mb-3 form-control" name="">
+                    <option value="">---Choose ingredient---</option>
+                    <option *ngFor="let opt of ingredients" value="{{opt}}">{{opt}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 btn" *ngFor="let cake of cakes">
+            <button [routerLink]="['/cakes/', cake._id]" class="img-thumbnail">
+                <img width="100%" src="http://localhost:3000/image/cakes/{{cake._id}}.jpg">
+                <h3>{{cake.name}}</h3>
+                <p>{{cake.ingredients| titlecase}}</p>
+            </button>
+        </div>
+    </div>
+</div>

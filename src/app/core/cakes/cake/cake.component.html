@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-5">
+            <img width="100%" src="http://localhost:3000/image/cakes/{{cake._id}}.jpg">
+        </div>
+        <div class="col">
+            <h3>{{cake.name}}</h3>
+            <b>Main ingredients: </b><span>{{cake.ingredients | titlecase}}</span> <br>
+            <b>Origin: </b><span>{{cake.origin}}</span> <br> <br>
+            <p>{{cake.description}}</p>
+        </div>
+    </div>
+</div>
